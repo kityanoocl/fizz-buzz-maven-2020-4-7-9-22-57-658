@@ -32,4 +32,13 @@ public class FizzBuzzTest {
 
         assertThat(result, is("Buzz"));
     }
+
+    @Test
+    public void should_return_FizzBuzz_when_raw_number_is_divisible_by_3_and_5() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String result = fizzBuzz.say(15);
+
+        assertThat(result, is("FizzBuzz"));
+    }
 }
