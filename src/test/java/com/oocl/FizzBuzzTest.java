@@ -14,4 +14,13 @@ public class FizzBuzzTest {
 
         assertThat(result, is("1"));
     }
+
+    @Test
+    public void should_return_Fizz_when_raw_number_is_divisbile_by_3() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String result = fizzBuzz.say(3);
+
+        assertThat(result, is("Fizz"));
+    }
 }
