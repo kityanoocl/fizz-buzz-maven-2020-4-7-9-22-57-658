@@ -1,14 +1,22 @@
 package com.oocl;
 
 public class FizzBuzz {
-    public FizzBuzz () {};
-    public String say (int number) {
-        String result = "";
-        if (number % 3 == 0) result += "Fizz";
+    public FizzBuzz() {
+    }
 
-        if (number % 5 == 0) {
+    public boolean isDivisibleByNumber(int dividend, int divisor) {
+        return dividend % divisor == 0;
+    }
+
+    public String say(int number) {
+        String result = "";
+        if (isDivisibleByNumber(number, 3)) {
+            result += "Fizz";
+        }
+
+        if (isDivisibleByNumber(number, 5)) {
             result += "Buzz";
         }
-        return (result.equals(""))? String.valueOf(number) : result;
+        return (result.equals("")) ? String.valueOf(number) : result;
     }
 }
